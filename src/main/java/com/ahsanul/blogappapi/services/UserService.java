@@ -1,6 +1,5 @@
 package com.ahsanul.blogappapi.services;
 
-import com.ahsanul.blogappapi.models.User;
 import com.ahsanul.blogappapi.payloads.UserDto;
 
 import java.util.List;

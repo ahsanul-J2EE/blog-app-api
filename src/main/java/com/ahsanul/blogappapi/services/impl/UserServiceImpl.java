@@ -1,15 +1,12 @@
 package com.ahsanul.blogappapi.services.impl;
 
 import com.ahsanul.blogappapi.exceptions.ResourceNotFoundException;
-import com.ahsanul.blogappapi.models.User;
+import com.ahsanul.blogappapi.entites.User;
 import com.ahsanul.blogappapi.payloads.UserDto;
 import com.ahsanul.blogappapi.repositories.UserRepo;
 import com.ahsanul.blogappapi.services.UserService;
-import lombok.Getter;
-import lombok.Setter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

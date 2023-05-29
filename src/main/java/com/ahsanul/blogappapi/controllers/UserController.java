@@ -1,20 +1,16 @@
 package com.ahsanul.blogappapi.controllers;
 
 
-import com.ahsanul.blogappapi.models.User;
 import com.ahsanul.blogappapi.payloads.ApiResponse;
 import com.ahsanul.blogappapi.payloads.UserDto;
 import com.ahsanul.blogappapi.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")

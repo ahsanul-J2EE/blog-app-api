@@ -1,10 +1,8 @@
 package com.ahsanul.blogappapi.services.impl;
 
 import com.ahsanul.blogappapi.exceptions.ResourceNotFoundException;
-import com.ahsanul.blogappapi.models.Category;
-import com.ahsanul.blogappapi.models.User;
+import com.ahsanul.blogappapi.entites.Category;
 import com.ahsanul.blogappapi.payloads.CategoryDto;
-import com.ahsanul.blogappapi.payloads.UserDto;
 import com.ahsanul.blogappapi.repositories.CategoryRepo;
 import com.ahsanul.blogappapi.services.CategoryService;
 import org.modelmapper.ModelMapper;
