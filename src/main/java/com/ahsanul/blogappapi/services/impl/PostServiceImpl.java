@@ -13,6 +13,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -65,14 +66,20 @@ public class PostServiceImpl implements PostService {
 
     }
 
+
     @Override
-    public PostDto getCategoryById(Integer postId) {
-        return null;
+    public PostDto getPostById(Integer postId) {
+        Post post = this.postRepo.findById(postId).orElseThrow(() -> new ResourceNotFoundException("Post", " post id", postId));
+        return this.modelMapper.map(post,PostDto.class);
     }
 
     @Override
     public List<PostDto> getAllPost() {
-        return null;
+
+        List<Post> allPosts = this.postRepo.findAll();
+        List<PostDto> postDtos = allPosts.stream().map((post)->this.modelMapper.map(post,PostDto.class)).collect(Collectors.toList());
+
+        return postDtos;
     }
 
     @Override

@@ -30,6 +30,29 @@ public class PostController {
 
     }
 
+    //get all post
+
+    @GetMapping("/all-posts")
+    public ResponseEntity<List<PostDto>> getAllPost(){
+
+        List<PostDto> posts = this.postService.getAllPost();
+
+        return new ResponseEntity<List<PostDto>>(posts, HttpStatus.OK);
+
+    }
+
+
+    //get all post by id
+
+    @GetMapping("/post/{postId}")
+    public ResponseEntity<PostDto> getPostById(@PathVariable Integer postId){
+
+        PostDto posts = this.postService.getPostById(postId);
+
+        return new ResponseEntity<PostDto>(posts, HttpStatus.OK);
+
+    }
+
     //get by user
 
     @GetMapping("user/{userId}/posts")
