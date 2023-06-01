@@ -3,6 +3,7 @@ package com.ahsanul.blogappapi.services;
 import com.ahsanul.blogappapi.entites.Post;
 import com.ahsanul.blogappapi.payloads.CategoryDto;
 import com.ahsanul.blogappapi.payloads.PostDto;
+import com.ahsanul.blogappapi.payloads.PostResponse;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public interface PostService {
 
     PostDto getPostById(Integer postId);
 
-    List<PostDto> getAllPost(Integer pageNumber, Integer pageSize);
+    PostResponse getAllPost(Integer pageNumber, Integer pageSize);
 
     List<PostDto> getAllPostsByCategory(Integer categoryId);
 
