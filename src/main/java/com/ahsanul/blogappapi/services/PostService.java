@@ -17,7 +17,7 @@ public interface PostService {
 
     PostDto getPostById(Integer postId);
 
-    PostResponse getAllPost(Integer pageNumber, Integer pageSize,String sortBy);
+    PostResponse getAllPost(Integer pageNumber, Integer pageSize,String sortBy,String sortDir);
 
     List<PostDto> getAllPostsByCategory(Integer categoryId);
 
