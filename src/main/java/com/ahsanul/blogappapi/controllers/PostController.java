@@ -71,4 +71,14 @@ public class PostController {
         return new ResponseEntity<List<PostDto>>(posts, HttpStatus.OK);
 
     }
+
+    //search post by title
+
+    @GetMapping("search/posts/{title}")
+    public ResponseEntity<List<PostDto>> searchPostByTitle(@PathVariable String title){
+
+        List<PostDto> posts = this.postService.searchPosts(title);
+        return new ResponseEntity<List<PostDto>>(posts, HttpStatus.OK);
+
+    }
 }
