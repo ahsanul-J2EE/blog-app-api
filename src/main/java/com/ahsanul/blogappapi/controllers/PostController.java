@@ -1,4 +1,5 @@
 package com.ahsanul.blogappapi.controllers;
+import com.ahsanul.blogappapi.config.AppConfig;
 import com.ahsanul.blogappapi.payloads.PostDto;
 import com.ahsanul.blogappapi.payloads.PostResponse;
 import com.ahsanul.blogappapi.services.PostService;
@@ -30,10 +31,10 @@ public class PostController {
 
     @GetMapping("/all-posts")
     public ResponseEntity<PostResponse> getAllPost(
-            @RequestParam(value = "pageNumber",defaultValue = "0",required = false)Integer pageNumber,
-            @RequestParam(value = "pageSize",defaultValue = "10",required = false) Integer pageSize,
-            @RequestParam(value = "sortBy",defaultValue = "postId",required = false) String sortBy,
-            @RequestParam(value = "sortDir",defaultValue = "asc",required = false) String sortDir){
+            @RequestParam(value = "pageNumber",defaultValue = AppConfig.pageNumber,required = false)Integer pageNumber,
+            @RequestParam(value = "pageSize",defaultValue = AppConfig.pageSize,required = false) Integer pageSize,
+            @RequestParam(value = "sortBy",defaultValue = AppConfig.sortBy,required = false) String sortBy,
+            @RequestParam(value = "sortDir",defaultValue = AppConfig.sortDir,required = false) String sortDir){
 
         PostResponse posts = this.postService.getAllPost(pageNumber,pageSize,sortBy,sortDir);
 
