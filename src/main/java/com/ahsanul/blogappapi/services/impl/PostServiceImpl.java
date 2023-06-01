@@ -76,10 +76,10 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostDto> getAllPost() {
+    public List<PostDto> getAllPost(Integer pageNumber, Integer pageSize) {
 
-        int pageSize = 2;
-        int pageNumber = 0;
+//        int pageSize = 20;
+//        int pageNumber = 0;
 
         PageRequest pageable = PageRequest.of(pageNumber, pageSize);
 
